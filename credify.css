@@ -1,0 +1,149 @@
+/* Page background */
+body {
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  /* Title */
+  h1#page-title {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+    margin-bottom: 25px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    user-select: none;
+  }
+  
+  /* Container for the entire form */
+  form#loanForm {
+    width: 100%;
+    max-width: 460px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+  }
+  
+  /* Labels */
+  form#loanForm label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #444;
+    font-size: 1.05rem;
+  }
+  
+  /* Inputs */
+  form#loanForm input[type="text"],
+  form#loanForm input[type="number"],
+  form#loanForm select {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+    border: 1.8px solid #bbb;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  form#loanForm input[type="text"]:focus,
+  form#loanForm input[type="number"]:focus,
+  form#loanForm select:focus {
+    border-color: #3f87f5;
+    outline: none;
+    box-shadow: 0 0 10px rgba(63,135,245,0.4);
+  }
+  
+  /* Submit button */
+  form#loanForm button[type="submit"] {
+    width: 100%;
+    background: linear-gradient(45deg, #3f87f5, #00c6ff);
+    color: white;
+    padding: 14px 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,198,255,0.5);
+    transition: background 0.4s ease, box-shadow 0.3s ease;
+    user-select: none;
+  }
+  
+  form#loanForm button[type="submit"]:hover {
+    background: linear-gradient(45deg, #005bb5, #0099e6);
+    box-shadow: 0 8px 15px rgba(0,123,255,0.7);
+  }
+  
+  /* Result box */
+  #result {
+    max-width: 460px;
+    margin: 30px auto 0;
+    padding: 18px 24px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    border-radius: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    user-select: none;
+  }
+  
+  /* Result status colors */
+  #result.approved {
+    color: #155724;
+    background-color: #d1f7d1;
+    border: 2px solid #28a745;
+    box-shadow: 0 0 12px rgba(40,167,69,0.7);
+  }
+  
+  #result.caution {
+    color: #856404;
+    background-color: #fff8d1;
+    border: 2px solid #ffc107;
+    box-shadow: 0 0 12px rgba(255,193,7,0.7);
+  }
+  
+  #result.denied {
+    color: #721c24;
+    background-color: #f9d6d6;
+    border: 2px solid #dc3545;
+    box-shadow: 0 0 12px rgba(220,53,69,0.7);
+  }
+  
+  /* Emoji style inside result */
+  #result .emoji {
+    font-size: 2.3rem;
+    line-height: 1;
+  }
+  
+  /* Spinner */
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #00c6ff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
